@@ -41,3 +41,26 @@ h2{
   top: 0;
   left: 0;
 }
+.promo{
+  background-image: url(/img/rasberry1.jpg);
+  border: 5px;
+  border-radius: 15px;
+  height: 165px;
+  width: 700px;
+  color: white;
+}
+.proma{
+  background-image: url(/img/marshmallow1.jpg_large);
+  border: 5px;
+  border-radius: 15px;
+  height: 165px;
+  width: 700px;
+  color: white;
+}
+.product_img1{
+  border: 150px;
+}
+.linsebutton{
+font-weight: 400;
+
+}
