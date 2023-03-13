@@ -92,7 +92,7 @@
       </a>
       <nav class="header-navigation">
         <div class="header-navigation-item">
-          <a href="/catalog.html" class="header-button header-button-icon-right" tabindex="1">
+          <a href="#" class="header-button header-button-icon-right" tabindex="1">
             Каталог
             <svg class="icon icon-16">
               <use xlink:href="#arrow-down" />
@@ -160,7 +160,7 @@
           <div class="text-header-3">Корзина</div>
           <div class="cart-list">
             <div class="cart-list-item">
-              <img alt="украшение" src="/img/products/raspberry.png" class="cart-list-item-photo">
+              <img alt="Малинка" src="/img/products/raspberry.png" class="cart-list-item-photo">
               <div>
                 <div class="text-header-6">Малинка</div>
                 <div class="text-caption-1 cart-list-item-caption">1 кг х 310 ₽</div>
@@ -173,7 +173,7 @@
               </button>
             </div>
             <div class="cart-list-item">
-              <img alt="украшение" src="/img/products/bubble_gum.png" class="cart-list-item-photo">
+              <img alt="Бабл-гам" src="/img/products/bubble_gum.png" class="cart-list-item-photo">
               <div>
                 <div class="text-header-6">Бабл-гам</div>
                 <div class="text-caption-1 cart-list-item-caption">1,5 кг х 320 ₽</div>
@@ -195,83 +195,142 @@
     </div>
   </header>
   <main class="main">
-    <div class="section">
-      <div class="hero">
-        <div class="hero-left">
-          <div class="text-header-1">Нежный пломбир с&nbsp;клубничным джемом</div>
-          <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-          <a href="#" class="button">Заказать</a>
-        </div>
-        <div class="slider">
-          <div class="slider-item active">
-            <img src="/img/ice-cream-1.png" alt="">
-          </div>
-          <div class="slider-item">
-            <img src="/img/ice-cream-2.png" alt="">
-          </div>
-          <div class="slider-item">
-            <img src="/img/ice-cream-3.png" alt="">
-          </div>
-          <div class="slider-navigation">
-            <button class="slider-navigation-button">
+    <div class="category">
+      <div class="breadcrumbs">
+        <a href="#" class="breadcrumbs-item">Главная</a>
+        <svg class="icon icon-12">
+          <use xlink:href="#chevrons-right" />
+        </svg>
+        <a href="#" class="breadcrumbs-item">Каталог</a>
+        <svg class="icon icon-12">
+          <use xlink:href="#chevrons-right" />
+        </svg>
+        <a href="#" class="breadcrumbs-item active">Сливочное мороженое</a>
+      </div>
+      <div class="text-header-2">Сливочное мороженое</div>
+      <div class="category-filter">
+        <div class="category-filter-row">
+          <div class="category-filter-option category-filter-option-sort">
+            <div class="category-filter-option-label">Сортировка:</div>
+            <button class="select icon-right">
+              по популярности
               <svg class="icon icon-16">
-                <use xlink:href="#arrow-left" />
-              </svg>
-            </button>
-            <button class="slider-navigation-button">
-              <svg class="icon icon-16">
-                <use xlink:href="#arrow-right" />
+                <use xlink:href="#arrow-down" />
               </svg>
             </button>
           </div>
+          <div class="category-filter-option category-filter-option-price">
+            <div class="category-filter-option-label">Цена: 100 ₽ – 500 ₽</div>
+            <div class="field">
+              <div class="range range-left-24 range-right-52">
+                <div class="range-selected">
+                  <button class="range-button"></button>
+                  <button class="range-button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category-filter-option category-filter-option-fatness">
+            <div class="category-filter-option-label">Жирность:</div>
+            <div class="field">
+              <label class="radio" for="zero-fatness">
+                <input type="radio" name="fatness" id="zero-fatness" class="radio-button">
+                <span class="radio-field"></span>
+                <span class="radio-label">0%</span>
+              </label>
+              <label class="radio" for="above-10">
+                <input type="radio" name="fatness" id="above-10" class="radio-button">
+                <span class="radio-field"></span>
+                <span class="radio-label">до 10%</span>
+              </label>
+              <label class="radio" for="above-30">
+                <input type="radio" name="fatness" id="above-30" class="radio-button">
+                <span class="radio-field"></span>
+                <span class="radio-label">до 30%</span>
+              </label>
+              <label class="radio" for="below-30">
+                <input type="radio" name="fatness" id="below-30" class="radio-button">
+                <span class="radio-field"></span>
+                <span class="radio-label">выше 30%</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="category-filter-row">
+          <div class="category-filter-option category-filter-option-toppings">
+            <div class="category-filter-option-label">Наполнители:</div>
+            <div class="field">
+              <label class="checkbox" for="choco">
+                <input type="checkbox" name="toppings" id="choco" class="checkbox-button">
+                <span class="checkbox-field">
+                  <svg class="icon icon-16 checkbox-field-off">
+                    <use xlink:href="#checkbox-off" />
+                  </svg>
+                  <svg class="icon icon-16 checkbox-field-on">
+                    <use xlink:href="#checkbox-on" />
+                  </svg>
+                </span>
+                <span class="checkbox-label">шоколадные</span>
+              </label>
+              <label class="checkbox" for="sugar">
+                <input type="checkbox" name="toppings" id="sugar" class="checkbox-button">
+                <span class="checkbox-field">
+                  <svg class="icon icon-16 checkbox-field-off">
+                    <use xlink:href="#checkbox-off" />
+                  </svg>
+                  <svg class="icon icon-16 checkbox-field-on">
+                    <use xlink:href="#checkbox-on" />
+                  </svg>
+                </span>
+                <span class="checkbox-label">сахарные посыпки</span>
+              </label>
+              <label class="checkbox" for="fruits">
+                <input type="checkbox" name="toppings" id="fruits" class="checkbox-button">
+                <span class="checkbox-field">
+                  <svg class="icon icon-16 checkbox-field-off">
+                    <use xlink:href="#checkbox-off" />
+                  </svg>
+                  <svg class="icon icon-16 checkbox-field-on">
+                    <use xlink:href="#checkbox-on" />
+                  </svg>
+                </span>
+                <span class="checkbox-label">фрукты</span>
+              </label>
+              <label class="checkbox" for="syrup">
+                <input type="checkbox" name="toppings" id="syrup" class="checkbox-button">
+                <span class="checkbox-field">
+                  <svg class="icon icon-16 checkbox-field-off">
+                    <use xlink:href="#checkbox-off" />
+                  </svg>
+                  <svg class="icon icon-16 checkbox-field-on">
+                    <use xlink:href="#checkbox-on" />
+                  </svg>
+                </span>
+                <span class="checkbox-label">сиропы</span>
+              </label>
+              <label class="checkbox" for="jam">
+                <input type="checkbox" name="toppings" id="jam" class="checkbox-button">
+                <span class="checkbox-field">
+                  <svg class="icon icon-16 checkbox-field-off">
+                    <use xlink:href="#checkbox-off" />
+                  </svg>
+                  <svg class="icon icon-16 checkbox-field-on">
+                    <use xlink:href="#checkbox-on" />
+                  </svg>
+                </span>
+                <span class="checkbox-label">джемы</span>
+              </label>
+            </div>
+          </div>
+          <div class="category-filter-apply">
+            <button class="category-filter-apply-button">Применить</button>
+          </div>
         </div>
       </div>
-      <div class="hero-footer">
-        <div class="slider-dots">
-          <button class="slider-dots-button active">1</button>
-          <button class="slider-dots-button">2</button>
-          <button class="slider-dots-button">3</button>
-        </div>
-        <div class="social">
-          <a href="https://t.me/htmlacademy" target="_blank" class="social-button">
-            <svg class="icon icon-24">
-              <use xlink:href="#tg" />
-            </svg>
-          </a>
-          <a href="https://vk.com/htmlacademy" target="_blank" class="social-button">
-            <svg class="icon icon-24">
-              <use xlink:href="#vk" />
-            </svg>
-          </a>
-          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank" class="social-button">
-            <svg class="icon icon-24">
-              <use xlink:href="#youtube" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="section section-with-title">
-      <div class="text-header-2 text-center">Заказывайте мороженое<br>и получайте подарки!</div>
-      <div class="grid grid-two-columns">
-        <div class="gift gift-raspberry">
-          <div class="text-header-3">Малинка даром!</div>
-          <p class="text-paragraph-2">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a href="#" class="button">Хочу подарок</a>
-        </div>
-        <div class="gift gift-marshmallow">
-          <div class="text-header-3">Маршмеллоу даром!</div>
-          <p class="text-paragraph-2">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-          <a href="#" class="button">Хочу подарок</a>
-        </div>
-      </div>
-    </div>
-    <div class="section section-with-title">
-      <div class="text-header-2 text-center">Попробуйте самые популярные<br>вкусы нашего мороженого</div>
       <div class="grid grid-four-columns">
         <div class="product">
           <div class="product-main">
-            <img alt="Малина" src="/img/products/raspberry.png" class="product-photo">
+            <img alt="Малинка" src="/img/products/raspberry.png" class="product-photo">
             <div class="text-header-4 product-title">Малинка</div>
             <div class="text-paragraph-2 text-center text-dark">Сливочное мороженое с&nbsp;малиновым джемом</div>
             <div class="product-footer">
@@ -286,7 +345,7 @@
         </div>
         <div class="product">
           <div class="product-main">
-            <img  alt="Фисташка" src="/img/products/pistachio.png" class="product-photo">
+            <img alt="Фисташка" src="/img/products/pistachio.png" class="product-photo">
             <div class="text-header-4 product-title">Фисташка</div>
             <div class="text-paragraph-2 text-center text-dark">Фисташковый пломбир с&nbsp;кусочками шоколада</div>
             <div class="product-footer">
@@ -329,122 +388,148 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="features">
-        <div class="features-main">
-          <div class="text-header-2 text-center">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</div>
-          <div class="grid grid-two-columns">
-            <div class="features-item">
-              <div class="features-item-icon">
-                <svg class="icon icon-32">
-                  <use xlink:href="#popsicle" />
-                </svg>
-              </div>
-              <div class="text-paragraph-2 text-dark">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</div>
-            </div>
-            <div class="features-item">
-              <div class="features-item-icon">
-                <svg class="icon icon-32">
-                  <use xlink:href="#cow" />
-                </svg>
-              </div>
-              <div class="text-paragraph-2 text-dark">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</div>
-            </div>
-            <div class="features-item">
-              <div class="features-item-icon">
-                <svg class="icon icon-32">
-                  <use xlink:href="#leaf" />
-                </svg>
-              </div>
-              <div class="text-paragraph-2 text-dark">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</div>
-            </div>
-            <div class="features-item">
-              <div class="features-item-icon">
-                <svg class="icon icon-32">
-                  <use xlink:href="#thermometer" />
-                </svg>
-              </div>
-              <div class="text-paragraph-2 text-dark">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section grid grid-two-columns">
-      <div class="news">
-        <div class="news-main">
-          <div class="news-title text-paragraph-3 text-dark">Новое в нашем блоге</div>
-          <div class="text-header-3">10 способов сервировки фруктовых щербетов к&nbsp;столу</div>
-        </div>
-      </div>
-      <div class="subscription">
-        <div class="subscription-main">
-          <div class="text-paragraph-2 text-dark">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</div>
-          <form class="subscription-form">
-            <input type="text" class="input" placeholder="email@example.com">
-            <button class="button-secondary">Отправить</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="section delivery">
-      <div class="delivery-left">
-        <div class="text-header-2">Доставка любимого мороженого на дом</div>
-        <div class="text-paragraph-2 text-dark">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</div>
-      </div>
-      <div class="delivery-right">
-        <div class="text-paragraph-3 delivery-form-description text-dark">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</div>
-        <form action="#" class="delivery-form">
-          <div class="delivery-form-date-field">
-            <div class="label">
-              <label class="label-text" for="date">Дата</label>
-              <div class="tooltip">
+        <div class="product">
+          <div class="product-main">
+            <img alt="Ежевика" src="/img/products/blackberry.png" class="product-photo">
+            <div class="text-header-4 product-title">Ежевика</div>
+            <div class="text-paragraph-2 text-center text-dark">Сливочное мороженое с&nbsp;ежевичным джемом</div>
+            <div class="product-footer">
+              <span class="text-header-4">330 ₽/кг</span>
+              <button class="product-cart-button">
                 <svg class="icon icon-16">
-                  <use xlink:href="#info" />
+                  <use xlink:href="#cart" />
                 </svg>
-                <div class="tooltip-text">
-                  Подсказка
-                </div>
-              </div>
+              </button>
             </div>
-            <input type="text" id="date" class="input" placeholder="01.04.2020">
           </div>
-          <div class="delivery-form-phone-field">
-            <div class="label">
-              <label class="label-text" for="phone">Телефон</label>
-            </div>
-            <input type="text" id="phone" class="input" placeholder="+7 800 999-00-00">
-          </div>
-          <div class="delivery-form-address-field">
-            <div class="label">
-              <label class="label-text" for="address">Адрес</label>
-              <div class="tooltip">
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="Банан" src="/img/products/banana.png" class="product-photo">
+            <div class="text-header-4 product-title">Банан</div>
+            <div class="text-paragraph-2 text-center text-dark">Сливочный пломбир с&nbsp;банановым вкусом</div>
+            <div class="product-footer">
+              <span class="text-header-4">340 ₽/кг</span>
+              <button class="product-cart-button">
                 <svg class="icon icon-16">
-                  <use xlink:href="#info" />
+                  <use xlink:href="#cart" />
                 </svg>
-                <div class="tooltip-text">
-                  Подсказка
-                </div>
-              </div>
+              </button>
             </div>
-            <input type="text" id="address" class="input" placeholder="ул. Большая Конюшенная, 19/8">
           </div>
-          <div class="delivery-form-submit">
-            <button type="submit" class="button-secondary">Отправить</button>
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="шоколад" src="/img/products/chocolate.png" class="product-photo" >
+            <div class="text-header-4 product-title">Шоколадка</div>
+            <div class="text-paragraph-2 text-center text-dark">Классический шоколадный пломбир</div>
+            <div class="product-footer">
+              <span class="text-header-4">270 ₽/кг</span>
+              <button class="product-cart-button">
+                <svg class="icon icon-16">
+                  <use xlink:href="#cart" />
+                </svg>
+              </button>
+            </div>
           </div>
-        </form>
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="Клубничка" src="/img/products/strawberry.png" class="product-photo">
+            <div class="text-header-4 product-title">Клубничка</div>
+            <div class="text-paragraph-2 text-center text-dark">Сливочный пломбир с&nbsp;клубничным вкусом</div>
+            <div class="product-footer">
+              <span class="text-header-4">300 ₽/кг</span>
+              <button class="product-cart-button">
+                <svg class="icon icon-16">
+                  <use xlink:href="#cart" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="Лимон" src="/img/products/lemon.png" class="product-photo">
+            <div class="text-header-4 product-title">Лимон</div>
+            <div class="text-paragraph-2 text-center text-dark">Освежающий лимонный сорбет</div>
+            <div class="product-footer">
+              <span class="text-header-4">310 ₽/кг</span>
+              <button class="product-cart-button">
+                <svg class="icon icon-16">
+                  <use xlink:href="#cart" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="Ментол" src="/img/products/menthol.png" class="product-photo">
+            <div class="text-header-4 product-title">Ментол</div>
+            <div class="text-paragraph-2 text-center text-dark">Сливочный пломбир с&nbsp;ментоловым сиропом</div>
+            <div class="product-footer">
+              <span class="text-header-4">320 ₽/кг</span>
+              <button class="product-cart-button">
+                <svg class="icon icon-16">
+                  <use xlink:href="#cart" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="Орешек" src="/img/products/nuts.png" class="product-photo">
+            <div class="text-header-4 product-title">Орешек</div>
+            <div class="text-paragraph-2 text-center text-dark">Фисташковый пломбир с&nbsp;шоколадным сиропом</div>
+            <div class="product-footer">
+              <span class="text-header-4">360 ₽/кг</span>
+              <button class="product-cart-button">
+                <svg class="icon icon-16">
+                  <use xlink:href="#cart" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-main">
+            <img alt="крем-брюле" src="/img/products/creme-brulee.png" class="product-photo">
+            <div class="text-header-4 product-title">Крем-брюле</div>
+            <div class="text-paragraph-2 text-center text-dark">Классическое крем-брюле</div>
+            <div class="product-footer">
+              <span class="text-header-4">280 ₽/кг</span>
+              <button class="product-cart-button">
+                <svg class="icon icon-16">
+                  <use xlink:href="#cart" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="section feedback">
-      <div class="feedback-main">
-        <div class="text-paragraph-2 text-dark">Адрес главного офиса и<br>офлайн-магазина:</div>
-        <div class="text-header-4 feedback-address">наб. реки Карповки,<br>5 лит П, Санкт-Петербург</div>
-        <div class="text-paragraph-2 text-dark">Для заказов по телефону:</div>
-        <a href="tel://+78128121212" class="feedback-phone">+7 (812) 812-12-12</a>
-        <div class="text-caption-1 text-dark">(с 10 до 20 ежедневно)</div>
-        <button class="button-secondary feedback-submit">Форма обратной связи</button>
+      <div class="category-pagination">
+        <div class="category-pagination-more">
+          <button class="button">Показать еще</button>
+        </div>
+        <div class="category-pagination-list">
+          <a href="#" class="category-pagination-item disabled">
+            <svg class="icon icon-16">
+              <use xlink:href="#arrow-left" />
+            </svg>
+          </a>
+          <a href="#" class="category-pagination-item active">1</a>
+          <a href="#" class="category-pagination-item">2</a>
+          <a href="#" class="category-pagination-item">3</a>
+          <a href="#" class="category-pagination-item">4</a>
+          <a href="#" class="category-pagination-item">5</a>
+          <a href="#" class="category-pagination-item">
+            <svg class="icon icon-16">
+              <use xlink:href="#arrow-right" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </main>
