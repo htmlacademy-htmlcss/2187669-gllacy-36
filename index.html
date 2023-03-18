@@ -87,36 +87,36 @@
   </svg>
   <header class="header">
     <div class="header-left">
-      <a href="/" class="header-logo">
+      <a href="/" class="header-logo" tabindex="0">
         <img src="/img/logo.svg" width="137" height="56" alt="Glaccy Shop">
       </a>
       <nav class="header-navigation">
         <div class="header-navigation-item">
-          <a href="/catalog.html" class="header-button header-button-icon-right" tabindex="1">
+          <a href="/catalog.html" class="header-button header-button-icon-right" tabindex="0">
             Каталог
             <svg class="icon icon-16">
               <use xlink:href="#arrow-down" />
             </svg>
           </a>
           <div class="header-navigation-sub-menu">
-            <a href="#" class="header-navigation-sub-menu-item accent">Новинки</a>
+            <a href="#" class="header-navigation-sub-menu-item accent" tabindex="0">Новинки</a>
             <div class="header-navigation-sub-menu-divider"></div>
-            <a href="#" class="header-navigation-sub-menu-item">Сливочное</a>
-            <a href="#" class="header-navigation-sub-menu-item">Щербеты</a>
-            <a href="#" class="header-navigation-sub-menu-item">Фруктовый лед</a>
-            <a href="#" class="header-navigation-sub-menu-item">Мелорин</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Сливочное</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Щербеты</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Фруктовый лед</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Мелорин</a>
           </div>
         </div>
         <div class="header-navigation-item">
-          <a href="#" class="header-button" tabindex="2">Доставка и оплата</a>
+          <a href="#" class="header-button" tabindex="0">Доставка и оплата</a>
         </div>
         <div class="header-navigation-item">
-          <a href="#" class="header-button" tabindex="3">О компании</a>
+          <a href="#" class="header-button" tabindex="0">О компании</a>
         </div>
       </nav>
     </div>
     <div class="header-right">
-      <a href="tel://+78005558628" class="phone">+7 800 555-86-28</a>
+      <a href="tel://+78005558628" class="phone" tabindex="0">+7 800 555-86-28</a>
       <div class="header-navigation-item">
         <button class="header-user-button icon-only">
           <svg class="icon icon-16">
@@ -124,7 +124,9 @@
           </svg>
         </button>
         <div class="popup header-navigation-item-search-popup">
-          <input type="text" class="input" placeholder="Поиск по сайту">
+          <form action="https://echo.htmlacademy.ru" method="post">
+          <input type="text" class="input" required name="search" placeholder="Поиск по сайту">
+          </form>
         </div>
       </div>
       <div class="header-navigation-item">
@@ -136,14 +138,14 @@
         </button>
         <div class="popup header-navigation-item-log-in-popup">
           <div class="text-header-3">Личный кабинет</div>
-          <form action="#" class="header-navigation-item-log-in-popup-form">
-            <input type="email" class="input" placeholder="email@example.com">
-            <input type="password" class="input" placeholder="Пароль">
+          <form action="https://echo.htmlacademy.ru/" method="post" class="header-navigation-item-log-in-popup-form">
+            <input  type="email" class="input" required name="email" placeholder="email@example.com">
+            <input type="password" class="input" required name="password" placeholder="Пароль">
             <div class="header-navigation-item-log-in-popup-form-footer">
               <button type="submit" class="button-secondary">Войти</button>
               <div class="header-navigation-item-log-in-popup-links">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Регистрация</a>
+                <a href="#" tabindex="0">Забыли пароль?</a>
+                <a href="#" tabindex="0">Регистрация</a>
               </div>
             </div>
           </form>
@@ -160,7 +162,7 @@
           <div class="text-header-3">Корзина</div>
           <div class="cart-list">
             <div class="cart-list-item">
-              <img alt="украшение" src="/img/products/raspberry.png" class="cart-list-item-photo">
+              <img alt="украшение" src="/img/products/raspberry.png" width="168" height="168" class="cart-list-item-photo">
               <div>
                 <div class="text-header-6">Малинка</div>
                 <div class="text-caption-1 cart-list-item-caption">1 кг х 310 ₽</div>
@@ -173,7 +175,7 @@
               </button>
             </div>
             <div class="cart-list-item">
-              <img alt="украшение" src="/img/products/bubble_gum.png" class="cart-list-item-photo">
+              <img alt="украшение" src="/img/products/bubble_gum.png" width="168" height="168" class="cart-list-item-photo">
               <div>
                 <div class="text-header-6">Бабл-гам</div>
                 <div class="text-caption-1 cart-list-item-caption">1,5 кг х 320 ₽</div>
@@ -195,22 +197,22 @@
     </div>
   </header>
   <main class="main">
-    <div class="section">
+    <section class="section">
       <div class="hero">
         <div class="hero-left">
-          <div class="text-header-1">Нежный пломбир с&nbsp;клубничным джемом</div>
+          <h1 class="text-header-1">Нежный пломбир с&nbsp;клубничным джемом</h1>
           <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button" tabindex="0">Заказать</a>
         </div>
         <div class="slider">
           <div class="slider-item active">
-            <img src="/img/ice-cream-1.png" alt="">
+            <img src="/img/ice-cream-1.png" width="327" height="507" alt="">
           </div>
           <div class="slider-item">
-            <img src="/img/ice-cream-2.png" alt="">
+            <img src="/img/ice-cream-2.png" width="66" height="150" alt="">
           </div>
           <div class="slider-item">
-            <img src="/img/ice-cream-3.png" alt="">
+            <img src="/img/ice-cream-3.png" width="66" height="150" alt="">
           </div>
           <div class="slider-navigation">
             <button class="slider-navigation-button">
@@ -233,47 +235,49 @@
           <button class="slider-dots-button">3</button>
         </div>
         <div class="social">
-          <a href="https://t.me/htmlacademy" target="_blank" class="social-button">
+          <a href="https://t.me/htmlacademy" tabindex="0" target="_blank" class="social-button">
             <svg class="icon icon-24">
               <use xlink:href="#tg" />
             </svg>
           </a>
-          <a href="https://vk.com/htmlacademy" target="_blank" class="social-button">
+          <a href="https://vk.com/htmlacademy" tabindex="0" target="_blank" class="social-button">
             <svg class="icon icon-24">
               <use xlink:href="#vk" />
             </svg>
           </a>
-          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank" class="social-button">
+          <a href="https://www.youtube.com/user/htmlacademyru" tabindex="0" target="_blank" class="social-button">
             <svg class="icon icon-24">
               <use xlink:href="#youtube" />
             </svg>
           </a>
         </div>
       </div>
-    </div>
-    <div class="section section-with-title">
-      <div class="text-header-2 text-center">Заказывайте мороженое<br>и получайте подарки!</div>
+    </section>
+    <section class="section section-with-title">
+      <h2 class="text-header-2 text-center">Заказывайте мороженое<br>и получайте подарки!</h2>
       <div class="grid grid-two-columns">
         <div class="gift gift-raspberry">
-          <div class="text-header-3">Малинка даром!</div>
+          <h2 class="text-header-3">Малинка даром!</h2>
           <p class="text-paragraph-2">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a href="#" class="button">Хочу подарок</a>
+          <a href="#" class="button" tabindex="0">Хочу подарок</a>
         </div>
         <div class="gift gift-marshmallow">
-          <div class="text-header-3">Маршмеллоу даром!</div>
+          <h2 class="text-header-3">Маршмеллоу даром!</h2>
           <p class="text-paragraph-2">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-          <a href="#" class="button">Хочу подарок</a>
+          <a href="#" class="button" tabindex="0">Хочу подарок</a>
         </div>
       </div>
-    </div>
-    <div class="section section-with-title">
-      <div class="text-header-2 text-center">Попробуйте самые популярные<br>вкусы нашего мороженого</div>
+    </section>
+    <section class="section section-with-title">
+      <h3 class="text-header-2 text-center">Попробуйте самые популярные<br>вкусы нашего мороженого</h3>
       <div class="grid grid-four-columns">
         <div class="product">
           <div class="product-main">
-            <img alt="Малина" src="/img/products/raspberry.png" class="product-photo">
-            <div class="text-header-4 product-title">Малинка</div>
+            <div class="product-content">
+            <img alt="Малина" src="/img/products/raspberry.png" width="168" height="168" class="product-photo">
+            <h3 class="text-header-4 product-title">Малинка</h3>
             <div class="text-paragraph-2 text-center text-dark">Сливочное мороженое с&nbsp;малиновым джемом</div>
+            </div>
             <div class="product-footer">
               <span class="text-header-4">310 ₽/кг</span>
               <button class="product-cart-button">
@@ -286,9 +290,11 @@
         </div>
         <div class="product">
           <div class="product-main">
-            <img  alt="Фисташка" src="/img/products/pistachio.png" class="product-photo">
-            <div class="text-header-4 product-title">Фисташка</div>
+            <div class="product-content">
+            <img  alt="Фисташка" src="/img/products/pistachio.png" width="168" height="168" class="product-photo">
+            <h3 class="text-header-4 product-title">Фисташка</h3>
             <div class="text-paragraph-2 text-center text-dark">Фисташковый пломбир с&nbsp;кусочками шоколада</div>
+            </div>
             <div class="product-footer">
               <span class="text-header-4">340 ₽/кг</span>
               <button class="product-cart-button">
@@ -301,9 +307,11 @@
         </div>
         <div class="product">
           <div class="product-main">
-            <img alt="Черника" src="/img/products/blueberries.png" class="product-photo">
-            <div class="text-header-4 product-title">Черника</div>
+            <div class="product-content">
+            <img alt="Черника" src="/img/products/blueberries.png" width="168" height="168" class="product-photo">
+            <h3 class="text-header-4 product-title">Черника</h3>
             <div class="text-paragraph-2 text-center text-dark">Крем-брюле с&nbsp;черничным джемом</div>
+            </div>
             <div class="product-footer">
               <span class="text-header-4">330 ₽/кг</span>
               <button class="product-cart-button">
@@ -316,9 +324,11 @@
         </div>
         <div class="product">
           <div class="product-main">
-            <img alt="Бабл-гам" src="/img/products/bubble_gum.png" class="product-photo">
-            <div class="text-header-4 product-title">Бабл-гам</div>
+            <div class="product-content">
+            <img alt="Бабл-гам" src="/img/products/bubble_gum.png" width="168" height="168" class="product-photo">
+            <h3 class="text-header-4 product-title">Бабл-гам</h3>
             <div class="text-paragraph-2 text-center text-dark">Ванильный пломбир со&nbsp;сладкой посыпкой</div>
+            </div>
             <div class="product-footer">
               <span class="text-header-4">320 ₽/кг</span>
               <button class="product-cart-button">
@@ -330,11 +340,11 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="section">
+    </section>
+    <section class="section">
       <div class="features">
         <div class="features-main">
-          <div class="text-header-2 text-center">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</div>
+          <h4 class="text-header-2 text-center">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h4>
           <div class="grid grid-two-columns">
             <div class="features-item">
               <div class="features-item-icon">
@@ -370,33 +380,33 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="section grid grid-two-columns">
+      </div>>
+    </section>
+    <section class="section grid grid-two-columns">
       <div class="news">
         <div class="news-main">
           <div class="news-title text-paragraph-3 text-dark">Новое в нашем блоге</div>
-          <div class="text-header-3">10 способов сервировки фруктовых щербетов к&nbsp;столу</div>
+          <h5 class="text-header-3">10 способов сервировки фруктовых щербетов к&nbsp;столу</h5>
         </div>
       </div>
       <div class="subscription">
         <div class="subscription-main">
           <div class="text-paragraph-2 text-dark">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</div>
-          <form class="subscription-form">
-            <input type="text" class="input" placeholder="email@example.com">
-            <button class="button-secondary">Отправить</button>
+          <form action="https://echo.htmlacademy.ru" method="post" class="subscription-form">
+            <input type="text" name="email" class="input" required placeholder="email@example.com">
+            <button type="submit" class="button-secondary" name="button">Отправить</button>
           </form>
         </div>
       </div>
-    </div>
-    <div class="section delivery">
+    </section>
+    <section class="section delivery">
       <div class="delivery-left">
-        <div class="text-header-2">Доставка любимого мороженого на дом</div>
+        <h6 class="text-header-2">Доставка любимого мороженого на дом</h6>
         <div class="text-paragraph-2 text-dark">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</div>
       </div>
       <div class="delivery-right">
         <div class="text-paragraph-3 delivery-form-description text-dark">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</div>
-        <form action="#" class="delivery-form">
+        <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
           <div class="delivery-form-date-field">
             <div class="label">
               <label class="label-text" for="date">Дата</label>
@@ -409,13 +419,13 @@
                 </div>
               </div>
             </div>
-            <input type="text" id="date" class="input" placeholder="01.04.2020">
+            <input type="text" id="date" class="input" required name="date" placeholder="01.04.2020">
           </div>
           <div class="delivery-form-phone-field">
             <div class="label">
               <label class="label-text" for="phone">Телефон</label>
             </div>
-            <input type="text" id="phone" class="input" placeholder="+7 800 999-00-00">
+            <input type="text" id="phone" class="input" required name="phone" placeholder="+7 800 999-00-00">
           </div>
           <div class="delivery-form-address-field">
             <div class="label">
@@ -429,60 +439,60 @@
                 </div>
               </div>
             </div>
-            <input type="text" id="address" class="input" placeholder="ул. Большая Конюшенная, 19/8">
+            <input type="text" id="address" class="input" required name="text" placeholder="ул. Большая Конюшенная, 19/8">
           </div>
           <div class="delivery-form-submit">
             <button type="submit" class="button-secondary">Отправить</button>
           </div>
         </form>
       </div>
-    </div>
-    <div class="section feedback">
+    </section>
+    <section class="section feedback">
       <div class="feedback-main">
         <div class="text-paragraph-2 text-dark">Адрес главного офиса и<br>офлайн-магазина:</div>
         <div class="text-header-4 feedback-address">наб. реки Карповки,<br>5 лит П, Санкт-Петербург</div>
         <div class="text-paragraph-2 text-dark">Для заказов по телефону:</div>
-        <a href="tel://+78128121212" class="feedback-phone">+7 (812) 812-12-12</a>
+        <a href="tel://+78128121212" class="feedback-phone" tabindex="0">+7 (812) 812-12-12</a>
         <div class="text-caption-1 text-dark">(с 10 до 20 ежедневно)</div>
         <button class="button-secondary feedback-submit">Форма обратной связи</button>
       </div>
-    </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="social">
-      <a href="https://t.me/htmlacademy" target="_blank" class="social-button">
+      <a href="https://t.me/htmlacademy" title="HTML академия в телграме" target="_blank" class="social-button" tabindex="0">
         <svg class="icon icon-24">
           <use xlink:href="#tg" />
         </svg>
       </a>
-      <a href="https://vk.com/htmlacademy" target="_blank" class="social-button">
+      <a href="https://vk.com/htmlacademy" title="HTML академия в Вконтакте" target="_blank" class="social-button" tabindex="0">
         <svg class="icon icon-24">
           <use xlink:href="#vk" />
         </svg>
       </a>
-      <a href="https://www.youtube.com/user/htmlacademyru" target="_blank" class="social-button">
+      <a href="https://www.youtube.com/user/htmlacademyru" title="HTML академия в Ютубе" target="_blank" class="social-button" tabindex="0">
         <svg class="icon icon-24">
           <use xlink:href="#youtube" />
         </svg>
       </a>
     </div>
     <nav class="footer-navigation">
-      <a href="#" class="text-caption-1 footer-provider">
+      <a href="#" class="text-caption-1 footer-provider" tabindex="0">
         <svg class="icon icon-16">
           <use xlink:href="#heart" />
         </svg>
         Для поставщиков
       </a>
-      <a href="#" class="text-caption-1">Наши документы</a>
-      <a href="#" class="text-caption-1">О производстве</a>
-      <a href="#" class="text-caption-1">Экологические стандарты</a>
+      <a href="#" class="text-caption-1" tabindex="0">Наши документы</a>
+      <a href="#" class="text-caption-1" tabindex="0">О производстве</a>
+      <a href="#" class="text-caption-1" tabindex="0">Экологические стандарты</a>
     </nav>
     <div class="footer-copyright">
       <a href="https://htmlacademy.ru/" target="_blank">
         <img src="/img/logo_htmlacademy.svg" alt=".html academy">
       </a>
       <div class="text-caption-2">
-        Сделано в <a href="#">.html academy</a> &copy; 2021
+        Сделано в <a href="#" tabindex="0">.html academy</a> &copy; 2021
       </div>
     </div>
   </footer>
@@ -495,10 +505,10 @@
         </svg>
       </button>
       <div class="text-header-3">Мы обязательно ответим вам!</div>
-      <form action="#" class="feedback-form">
-        <input type="text" class="input" placeholder="Имя и фамилия">
-        <input type="text" class="input" placeholder="email@example.com">
-        <textarea class="input" placeholder="В свободной форме"></textarea>
+      <form action="https://echo.htmlacademy.ru/" method="post" class="feedback-form" >
+        <input type="text" class="input" required name="text" placeholder="Имя и фамилия">
+        <input type="email" class="input" required name="email" placeholder="email@example.com">
+        <textarea class="input" name="feedback" placeholder="В свободной форме"></textarea>
         <div class="feedback-form-footer">
           <button type="submit" class="button-secondary">Отправить</button>
         </div>

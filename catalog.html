@@ -87,36 +87,36 @@
   </svg>
   <header class="header">
     <div class="header-left">
-      <a href="/" class="header-logo">
+      <a href="/" class="header-logo" tabindex="0">
         <img src="/img/logo.svg" width="137" height="56" alt="Glaccy Shop">
       </a>
       <nav class="header-navigation">
         <div class="header-navigation-item">
-          <a href="#" class="header-button header-button-icon-right" tabindex="1">
+          <a href="#" class="header-button header-button-icon-right" tabindex="0">
             Каталог
             <svg class="icon icon-16">
               <use xlink:href="#arrow-down" />
             </svg>
           </a>
           <div class="header-navigation-sub-menu">
-            <a href="#" class="header-navigation-sub-menu-item accent">Новинки</a>
+            <a href="#" class="header-navigation-sub-menu-item accent" tabindex="0">Новинки</a>
             <div class="header-navigation-sub-menu-divider"></div>
-            <a href="#" class="header-navigation-sub-menu-item">Сливочное</a>
-            <a href="#" class="header-navigation-sub-menu-item">Щербеты</a>
-            <a href="#" class="header-navigation-sub-menu-item">Фруктовый лед</a>
-            <a href="#" class="header-navigation-sub-menu-item">Мелорин</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Сливочное</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Щербеты</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Фруктовый лед</a>
+            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Мелорин</a>
           </div>
         </div>
         <div class="header-navigation-item">
-          <a href="#" class="header-button" tabindex="2">Доставка и оплата</a>
+          <a href="#" class="header-button" tabindex="0">Доставка и оплата</a>
         </div>
         <div class="header-navigation-item">
-          <a href="#" class="header-button" tabindex="3">О компании</a>
+          <a href="#" class="header-button" tabindex="0">О компании</a>
         </div>
       </nav>
     </div>
     <div class="header-right">
-      <a href="tel://+78005558628" class="phone">+7 800 555-86-28</a>
+      <a href="tel://+78005558628" class="phone" tabindex="0">+7 800 555-86-28</a>
       <div class="header-navigation-item">
         <button class="header-user-button icon-only">
           <svg class="icon icon-16">
@@ -142,8 +142,8 @@
             <div class="header-navigation-item-log-in-popup-form-footer">
               <button type="submit" class="button-secondary">Войти</button>
               <div class="header-navigation-item-log-in-popup-links">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Регистрация</a>
+                <a href="#" tabindex="0">Забыли пароль?</a>
+                <a href="#" tabindex="0">Регистрация</a>
               </div>
             </div>
           </form>
@@ -197,21 +197,22 @@
   <main class="main">
     <div class="category">
       <div class="breadcrumbs">
-        <a href="#" class="breadcrumbs-item">Главная</a>
+        <a href="#" class="breadcrumbs-item" tabindex="0">Главная</a>
         <svg class="icon icon-12">
           <use xlink:href="#chevrons-right" />
         </svg>
-        <a href="#" class="breadcrumbs-item">Каталог</a>
+        <a href="#" class="breadcrumbs-item" tabindex="0">Каталог</a>
         <svg class="icon icon-12">
           <use xlink:href="#chevrons-right" />
         </svg>
-        <a href="#" class="breadcrumbs-item active">Сливочное мороженое</a>
+        <a href="#" class="breadcrumbs-item active" tabindex="0">Сливочное мороженое</a>
       </div>
       <div class="text-header-2">Сливочное мороженое</div>
-      <div class="category-filter">
+      <form action="https://echo.htmlacademy.ru" method="post" class="category-filter">
         <div class="category-filter-row">
           <div class="category-filter-option category-filter-option-sort">
             <div class="category-filter-option-label">Сортировка:</div>
+            <input type="hidden" name="soft" value="popular">
             <button class="select icon-right">
               по популярности
               <svg class="icon icon-16">
@@ -223,6 +224,8 @@
             <div class="category-filter-option-label">Цена: 100 ₽ – 500 ₽</div>
             <div class="field">
               <div class="range range-left-24 range-right-52">
+                <input type="hidden" name="start_at" value="100">
+                <input type="hidden" name="end_at" value="500">
                 <div class="range-selected">
                   <button class="range-button"></button>
                   <button class="range-button"></button>
@@ -233,23 +236,23 @@
           <div class="category-filter-option category-filter-option-fatness">
             <div class="category-filter-option-label">Жирность:</div>
             <div class="field">
-              <label class="radio" for="zero-fatness">
-                <input type="radio" name="fatness" id="zero-fatness" class="radio-button">
+              <label class="radio" for="zero-fatness" tabindex="0" >
+                <input type="radio" name="fatness" id="zero-fatness" value="0" class="radio-button">
                 <span class="radio-field"></span>
                 <span class="radio-label">0%</span>
               </label>
-              <label class="radio" for="above-10">
-                <input type="radio" name="fatness" id="above-10" class="radio-button">
+              <label class="radio" for="zero-fatness" tabindex="0">
+                <input type="radio" name="fatness" id="above-10" value="10" class="radio-button">
                 <span class="radio-field"></span>
                 <span class="radio-label">до 10%</span>
               </label>
-              <label class="radio" for="above-30">
-                <input type="radio" name="fatness" id="above-30" class="radio-button">
+              <label class="radio" for="above-30" tabindex="0">
+                <input type="radio" name="fatness" id="above-30" value="30" class="radio-button">
                 <span class="radio-field"></span>
                 <span class="radio-label">до 30%</span>
               </label>
-              <label class="radio" for="below-30">
-                <input type="radio" name="fatness" id="below-30" class="radio-button">
+              <label class="radio" for="below-30" tabindex="0">
+                <input type="radio" name="fatness" id="below-30" value="30" class="radio-button">
                 <span class="radio-field"></span>
                 <span class="radio-label">выше 30%</span>
               </label>
@@ -260,8 +263,8 @@
           <div class="category-filter-option category-filter-option-toppings">
             <div class="category-filter-option-label">Наполнители:</div>
             <div class="field">
-              <label class="checkbox" for="choco">
-                <input type="checkbox" name="toppings" id="choco" class="checkbox-button">
+              <label class="checkbox" for="choco" tabindex="0">
+                <input type="checkbox" name="toppings" id="choco" value="choco" class="checkbox-button">
                 <span class="checkbox-field">
                   <svg class="icon icon-16 checkbox-field-off">
                     <use xlink:href="#checkbox-off" />
@@ -272,8 +275,8 @@
                 </span>
                 <span class="checkbox-label">шоколадные</span>
               </label>
-              <label class="checkbox" for="sugar">
-                <input type="checkbox" name="toppings" id="sugar" class="checkbox-button">
+              <label class="checkbox" for="sugar" tabindex="0">
+                <input type="checkbox" name="toppings" id="sugar" value="sugar" class="checkbox-button">
                 <span class="checkbox-field">
                   <svg class="icon icon-16 checkbox-field-off">
                     <use xlink:href="#checkbox-off" />
@@ -284,8 +287,8 @@
                 </span>
                 <span class="checkbox-label">сахарные посыпки</span>
               </label>
-              <label class="checkbox" for="fruits">
-                <input type="checkbox" name="toppings" id="fruits" class="checkbox-button">
+              <label class="checkbox" for="fruits" tabindex="0">
+                <input type="checkbox" name="toppings" id="fruits" value="fruits" class="checkbox-button">
                 <span class="checkbox-field">
                   <svg class="icon icon-16 checkbox-field-off">
                     <use xlink:href="#checkbox-off" />
@@ -296,8 +299,8 @@
                 </span>
                 <span class="checkbox-label">фрукты</span>
               </label>
-              <label class="checkbox" for="syrup">
-                <input type="checkbox" name="toppings" id="syrup" class="checkbox-button">
+              <label class="checkbox" for="syrup" tabindex="0">
+                <input type="checkbox" name="toppings" id="syrup" value="syrup" class="checkbox-button">
                 <span class="checkbox-field">
                   <svg class="icon icon-16 checkbox-field-off">
                     <use xlink:href="#checkbox-off" />
@@ -308,8 +311,8 @@
                 </span>
                 <span class="checkbox-label">сиропы</span>
               </label>
-              <label class="checkbox" for="jam">
-                <input type="checkbox" name="toppings" id="jam" class="checkbox-button">
+              <label class="checkbox" for="jam" tabindex="0">
+                <input type="checkbox" name="toppings" id="jam" value="jam" class="checkbox-button">
                 <span class="checkbox-field">
                   <svg class="icon icon-16 checkbox-field-off">
                     <use xlink:href="#checkbox-off" />
@@ -323,10 +326,10 @@
             </div>
           </div>
           <div class="category-filter-apply">
-            <button class="category-filter-apply-button">Применить</button>
+            <button type="submit" class="category-filter-apply-button">Применить</button>
           </div>
         </div>
-      </div>
+      </form>
       <div class="grid grid-four-columns">
         <div class="product">
           <div class="product-main">
@@ -514,16 +517,16 @@
           <button class="button">Показать еще</button>
         </div>
         <div class="category-pagination-list">
-          <a href="#" class="category-pagination-item disabled">
+          <a href="#" class="category-pagination-item disabled" tabindex="0">
             <svg class="icon icon-16">
               <use xlink:href="#arrow-left" />
             </svg>
           </a>
-          <a href="#" class="category-pagination-item active">1</a>
-          <a href="#" class="category-pagination-item">2</a>
-          <a href="#" class="category-pagination-item">3</a>
-          <a href="#" class="category-pagination-item">4</a>
-          <a href="#" class="category-pagination-item">5</a>
+          <a href="#" class="category-pagination-item active" tabindex="0">1</a>
+          <a href="#" class="category-pagination-item" tabindex="0">2</a>
+          <a href="#" class="category-pagination-item" tabindex="0">3</a>
+          <a href="#" class="category-pagination-item" tabindex="0">4</a>
+          <a href="#" class="category-pagination-item" tabindex="0">5</a>
           <a href="#" class="category-pagination-item">
             <svg class="icon icon-16">
               <use xlink:href="#arrow-right" />
@@ -535,7 +538,7 @@
   </main>
   <footer class="footer">
     <div class="social">
-      <a href="https://t.me/htmlacademy" target="_blank" class="social-button">
+      <a href="https://t.me/htmlacademy" target="_blank" class="social-button" tabindex="0">
         <svg class="icon icon-24">
           <use xlink:href="#tg" />
         </svg>
@@ -545,29 +548,29 @@
           <use xlink:href="#vk" />
         </svg>
       </a>
-      <a href="https://www.youtube.com/user/htmlacademyru" target="_blank" class="social-button">
+      <a href="https://www.youtube.com/user/htmlacademyru" target="_blank" class="social-button" tabindex="0">
         <svg class="icon icon-24">
           <use xlink:href="#youtube" />
         </svg>
       </a>
     </div>
     <nav class="footer-navigation">
-      <a href="#" class="text-caption-1 footer-provider">
+      <a href="#" class="text-caption-1 footer-provider" tabindex="0">
         <svg class="icon icon-16">
           <use xlink:href="#heart" />
         </svg>
         Для поставщиков
       </a>
-      <a href="#" class="text-caption-1">Наши документы</a>
-      <a href="#" class="text-caption-1">О производстве</a>
-      <a href="#" class="text-caption-1">Экологические стандарты</a>
+      <a href="#" class="text-caption-1" tabindex="0">Наши документы</a>
+      <a href="#" class="text-caption-1" tabindex="0">О производстве</a>
+      <a href="#" class="text-caption-1" tabindex="0">Экологические стандарты</a>
     </nav>
     <div class="footer-copyright">
       <a href="https://htmlacademy.ru/" target="_blank">
         <img src="/img/logo_htmlacademy.svg" alt=".html academy">
       </a>
       <div class="text-caption-2">
-        Сделано в <a href="#">.html academy</a> &copy; 2021
+        Сделано в <a href="#" tabindex="0">.html academy</a> &copy; 2021
       </div>
     </div>
   </footer>
