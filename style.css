@@ -754,7 +754,6 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
   color: #2D3440;
   text-decoration: none;
   border-radius: 30px;
-  white-space: nowrap;
 }
 
 .header-button:hover, .header-navigation-item:hover .header-button {
@@ -909,6 +908,7 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
 
 .header-navigation li {
   list-style-type: none;
+  max-width: 180px;
 }
 
 .header-navigation-item {
@@ -983,6 +983,7 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
 
 .header-right .header-navigation-item {
   margin-left: 16px;
+  max-width: 120px;
 }
 
 .header-right-menu {
@@ -993,7 +994,9 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
   margin: 0;
   padding: 0;
 }
-
+.header-right .header-navigation-item:nth-child(2) {
+  max-width: 40px;
+}
 .header-right-menu li {
   list-style-type: none;
 }
