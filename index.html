@@ -91,59 +91,59 @@
       <img src="/img/logo.svg" width="137" height="56" alt="Glaccy Shop">
     </a>
     <nav class="header-navigation">
-      <div class="header-navigation-item">
-        <a href="#" class="header-button header-button-icon-right" tabindex="0">
-          Каталог
-          <svg class="icon icon-16">
-            <use xlink:href="#arrow-down" />
-          </svg>
-        </a>
-        <div class="header-navigation-sub-menu">
-          <div class="header-navigation-sub-menu-content">
-            <a href="#" class="header-navigation-sub-menu-item accent" tabindex="0">Новинки</a>
-            <div class="header-navigation-sub-menu-divider"></div>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Сливочное</a>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Щербеты</a>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Фруктовый лед</a>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Мелорин</a>
-          </div>
-        </div>
-      </div>
-      <div class="header-navigation-item">
-        <a href="#" class="header-button" tabindex="0">Доставка и оплата</a>
-      </div>
-      <div class="header-navigation-item">
-        <a href="#" class="header-button" tabindex="0">О компании</a>
-      </div>
+      <ul>
+        <li class="header-navigation-item">
+          <a href="#" class="header-button header-button-icon-right" tabindex="0">
+            Каталог
+            <svg class="icon icon-16">
+              <use xlink:href="#arrow-down" />
+            </svg>
+          </a>
+          <ul class="header-navigation-sub-menu">
+            <li><a href="#" class="header-navigation-sub-menu-item accent" tabindex="0">Новинки</a></li>
+            <li class="header-navigation-sub-menu-divider"></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Сливочное</a></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Щербеты</a></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Фруктовый лед</a></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Мелорин</a></li>
+          </ul>
+        </li>
+        <li class="header-navigation-item">
+          <a href="#" class="header-button" tabindex="0">Доставка и оплата</a>
+        </li>
+        <li class="header-navigation-item">
+          <a href="#" class="header-button" tabindex="0">О компании</a>
+        </li>
+      </ul>
     </nav>
   </div>
   <div class="header-right">
-    <a href="tel://+78005558628" class="phone" tabindex="0">+7 800 555-86-28</a>
-    <div class="header-navigation-item">
-      <button class="header-user-button icon-only" tabindex="0">
-        <svg class="icon icon-16">
-          <use xlink:href="#search" />
-        </svg>
-        <span class="visually-hidden">Поиск по сайту</span>
-      </button>
-      <div class="popup">
-        <div class="popup-content header-navigation-item-search-popup">
+    <ul class="header-right-menu">
+      <li>
+        <a href="tel://+78005558628" class="phone" tabindex="0">+7 800 555-86-28</a>
+      </li>
+      <li class="header-navigation-item">
+        <button class="header-user-button icon-only" tabindex="0">
+          <svg class="icon icon-16">
+            <use xlink:href="#search" />
+          </svg>
+          <span class="visually-hidden">Поиск по сайту</span>
+        </button>
+        <div class="popup header-navigation-item-search-popup">
           <form action="https://echo.htmlacademy.ru" method="post">
             <label for="search-text" class="visually-hidden">Поиск по сайту</label>
             <input type="text" id="search-text" class="input" required name="search" placeholder="Поиск по сайту">
           </form>
         </div>
-      </div>
-    </div>
-    <div class="header-navigation-item">
-      <button class="header-user-button icon-left" tabindex="0">
-        <svg class="icon icon-16">
-          <use xlink:href="#log-in" />
-        </svg>
-        Вход
-      </button>
-      <div class="popup">
-        <div class="popup-content header-navigation-item-log-in-popup">
+      </li>
+      <li class="header-navigation-item">
+        <button class="header-user-button icon-left" tabindex="0">
+          <svg class="icon icon-16">
+            <use xlink:href="#log-in" />
+          </svg>
+          Вход
+        </button>
+        <div class="popup header-navigation-item-log-in-popup">
           <h3 class="text-header-3">Личный кабинет</h3>
           <form action="https://echo.htmlacademy.ru/" method="post" class="header-navigation-item-log-in-popup-form">
             <label for="login-email" class="visually-hidden">Email для входа</label>
@@ -159,17 +159,15 @@
             </div>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="header-navigation-item">
-      <button class="header-user-button icon-left" tabindex="0">
-        <svg class="icon icon-16">
-          <use xlink:href="#cart" />
-        </svg>
-        2 товара
-      </button>
-      <div class="popup">
-        <div class="popup-content header-navigation-item-cart-popup cart">
+      </li>
+      <li class="header-navigation-item">
+        <button class="header-user-button icon-left" tabindex="0">
+          <svg class="icon icon-16">
+            <use xlink:href="#cart" />
+          </svg>
+          2 товара
+        </button>
+        <div class="popup header-navigation-item-cart-popup cart">
           <h3 class="text-header-3">Корзина</h3>
           <div class="cart-list">
             <div class="cart-list-item">
@@ -206,8 +204,8 @@
             <div class="text-header-6">Итого: 790 ₽</div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </header>
 <main class="main">
