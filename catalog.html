@@ -91,59 +91,59 @@
       <img src="/img/logo.svg" width="137" height="56" alt="Glaccy Shop">
     </a>
     <nav class="header-navigation">
-      <div class="header-navigation-item">
-        <a href="#" class="header-button header-button-icon-right" tabindex="0">
-          Каталог
-          <svg class="icon icon-16">
-            <use xlink:href="#arrow-down" />
-          </svg>
-        </a>
-        <div class="header-navigation-sub-menu">
-          <div class="header-navigation-sub-menu-content">
-            <a href="#" class="header-navigation-sub-menu-item accent" tabindex="0">Новинки</a>
-            <div class="header-navigation-sub-menu-divider"></div>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Сливочное</a>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Щербеты</a>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Фруктовый лед</a>
-            <a href="#" class="header-navigation-sub-menu-item" tabindex="0">Мелорин</a>
-          </div>
-        </div>
-      </div>
-      <div class="header-navigation-item">
-        <a href="#" class="header-button" tabindex="0">Доставка и оплата</a>
-      </div>
-      <div class="header-navigation-item">
-        <a href="#" class="header-button" tabindex="0">О компании</a>
-      </div>
+      <ul>
+        <li class="header-navigation-item">
+          <a href="#" class="header-button header-button-icon-right" tabindex="0">
+            Каталог
+            <svg class="icon icon-16">
+              <use xlink:href="#arrow-down" />
+            </svg>
+          </a>
+          <ul class="header-navigation-sub-menu">
+            <li><a href="#" class="header-navigation-sub-menu-item accent" tabindex="0">Новинки</a></li>
+            <li class="header-navigation-sub-menu-divider"></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Сливочное</a></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Щербеты</a></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Фруктовый лед</a></li>
+            <li><a href="#" class="header-navigation-sub-menu-item" tabindex="0">Мелорин</a></li>
+          </ul>
+        </li>
+        <li class="header-navigation-item">
+          <a href="#" class="header-button" tabindex="0">Доставка и оплата</a>
+        </li>
+        <li class="header-navigation-item">
+          <a href="#" class="header-button" tabindex="0">О компании</a>
+        </li>
+      </ul>
     </nav>
   </div>
   <div class="header-right">
-    <a href="tel://+78005558628" class="phone" tabindex="0">+7 800 555-86-28</a>
-    <div class="header-navigation-item">
-      <button class="header-user-button icon-only" tabindex="0">
-        <svg class="icon icon-16">
-          <use xlink:href="#search" />
-        </svg>
-        <span class="visually-hidden">Поиск по сайту</span>
-      </button>
-      <div class="popup">
-        <div class="popup-content header-navigation-item-search-popup">
+    <ul class="header-right-menu">
+      <li>
+        <a href="tel://+78005558628" class="phone" tabindex="0">+7 800 555-86-28</a>
+      </li>
+      <li class="header-navigation-item">
+        <button class="header-user-button icon-only" tabindex="0">
+          <svg class="icon icon-16">
+            <use xlink:href="#search" />
+          </svg>
+          <span class="visually-hidden">Поиск по сайту</span>
+        </button>
+        <div class="popup header-navigation-item-search-popup">
           <form action="https://echo.htmlacademy.ru" method="post">
             <label for="search-text" class="visually-hidden">Поиск по сайту</label>
             <input type="text" id="search-text" class="input" required name="search" placeholder="Поиск по сайту">
           </form>
         </div>
-      </div>
-    </div>
-    <div class="header-navigation-item">
-      <button class="header-user-button icon-left" tabindex="0">
-        <svg class="icon icon-16">
-          <use xlink:href="#log-in" />
-        </svg>
-        Вход
-      </button>
-      <div class="popup">
-        <div class="popup-content header-navigation-item-log-in-popup">
+      </li>
+      <li class="header-navigation-item">
+        <button class="header-user-button icon-left" tabindex="0">
+          <svg class="icon icon-16">
+            <use xlink:href="#log-in" />
+          </svg>
+          Вход
+        </button>
+        <div class="popup header-navigation-item-log-in-popup">
           <h3 class="text-header-3">Личный кабинет</h3>
           <form action="https://echo.htmlacademy.ru/" method="post" class="header-navigation-item-log-in-popup-form">
             <label for="login-email" class="visually-hidden">Email для входа</label>
@@ -159,17 +159,15 @@
             </div>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="header-navigation-item">
-      <button class="header-user-button icon-left" tabindex="0">
-        <svg class="icon icon-16">
-          <use xlink:href="#cart" />
-        </svg>
-        2 товара
-      </button>
-      <div class="popup">
-        <div class="popup-content header-navigation-item-cart-popup cart">
+      </li>
+      <li class="header-navigation-item">
+        <button class="header-user-button icon-left" tabindex="0">
+          <svg class="icon icon-16">
+            <use xlink:href="#cart" />
+          </svg>
+          2 товара
+        </button>
+        <div class="popup header-navigation-item-cart-popup cart">
           <h3 class="text-header-3">Корзина</h3>
           <div class="cart-list">
             <div class="cart-list-item">
@@ -206,8 +204,8 @@
             <div class="text-header-6">Итого: 790 ₽</div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </header>
 <main class="main">
@@ -349,7 +347,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Малинка" src="/img/products/raspberry.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Малинка</h4>
+            <h2 class="text-header-4 product-title">Малинка</h2>
             <div class="text-paragraph-2 text-center text-dark">Сливочное мороженое с&nbsp;малиновым джемом</div>
           </div>
           <div class="product-footer">
@@ -367,7 +365,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Фисташка" src="/img/products/pistachio.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Фисташка</h4>
+            <h2 class="text-header-4 product-title">Фисташка</h2>
             <div class="text-paragraph-2 text-center text-dark">Фисташковый пломбир с&nbsp;кусочками шоколада</div>
           </div>
           <div class="product-footer">
@@ -385,7 +383,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Черника" src="/img/products/blueberries.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Черника</h4>
+            <h2 class="text-header-4 product-title">Черника</h2>
             <div class="text-paragraph-2 text-center text-dark">Крем-брюле с&nbsp;черничным джемом</div>
           </div>
           <div class="product-footer">
@@ -403,7 +401,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Бабл-гам" src="/img/products/bubble_gum.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Бабл-гам</h4>
+            <h2 class="text-header-4 product-title">Бабл-гам</h2>
             <div class="text-paragraph-2 text-center text-dark">Ванильный пломбир со&nbsp;сладкой посыпкой</div>
           </div>
           <div class="product-footer">
@@ -421,7 +419,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Ежевика" src="/img/products/blackberry.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Ежевика</h4>
+            <h2 class="text-header-4 product-title">Ежевика</h2>
             <div class="text-paragraph-2 text-center text-dark">Сливочное мороженое с&nbsp;ежевичным джемом</div>
           </div>
           <div class="product-footer">
@@ -439,7 +437,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Банан" src="/img/products/banana.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Банан</h4>
+            <h2 class="text-header-4 product-title">Банан</h2>
             <div class="text-paragraph-2 text-center text-dark">Сливочный пломбир с&nbsp;банановым вкусом</div>
           </div>
           <div class="product-footer">
@@ -457,7 +455,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="шоколад" src="/img/products/chocolate.png" width="168" height="168" class="product-photo" >
-            <h4 class="text-header-4 product-title">Шоколадка</h4>
+            <h2 class="text-header-4 product-title">Шоколадка</h2>
             <div class="text-paragraph-2 text-center text-dark">Классический шоколадный пломбир</div>
           </div>
           <div class="product-footer">
@@ -475,7 +473,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Клубничка" src="/img/products/strawberry.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Клубничка</h4>
+            <h2 class="text-header-4 product-title">Клубничка</h2>
             <div class="text-paragraph-2 text-center text-dark">Сливочный пломбир с&nbsp;клубничным вкусом</div>
           </div>
           <div class="product-footer">
@@ -493,7 +491,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Лимон" src="/img/products/lemon.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Лимон</h4>
+            <h2 class="text-header-4 product-title">Лимон</h2>
             <div class="text-paragraph-2 text-center text-dark">Освежающий лимонный сорбет</div>
           </div>
           <div class="product-footer">
@@ -511,7 +509,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Ментол" src="/img/products/menthol.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Ментол</h4>
+            <h2 class="text-header-4 product-title">Ментол</h2>
             <div class="text-paragraph-2 text-center text-dark">Сливочный пломбир с&nbsp;ментоловым сиропом</div>
           </div>
           <div class="product-footer">
@@ -529,7 +527,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="Орешек" src="/img/products/nuts.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Орешек</h4>
+            <h2 class="text-header-4 product-title">Орешек</h2>
             <div class="text-paragraph-2 text-center text-dark">Фисташковый пломбир с&nbsp;шоколадным сиропом</div>
           </div>
           <div class="product-footer">
@@ -547,7 +545,7 @@
         <div class="product-main">
           <div class="product-content">
             <img alt="крем-брюле" src="/img/products/creme-brulee.png" width="168" height="168" class="product-photo">
-            <h4 class="text-header-4 product-title">Крем-брюле</h4>
+            <h2 class="text-header-4 product-title">Крем-брюле</h2>
             <div class="text-paragraph-2 text-center text-dark">Классическое крем-брюле</div>
           </div>
           <div class="product-footer">

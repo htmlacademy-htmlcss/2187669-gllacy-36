@@ -694,10 +694,6 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
  */
 
 .popup {
-
-}
-
-.popup-content {
   padding: 48px;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -761,7 +757,7 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
   white-space: nowrap;
 }
 
-.header-button:hover {
+.header-button:hover, .header-navigation-item:hover .header-button {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
@@ -826,7 +822,7 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
   white-space: nowrap;
 }
 
-.header-user-button:hover {
+.header-user-button:hover, .header-navigation-item:hover .header-user-button {
   background-color: rgb(252, 252, 252, 0.5);
 }
 
@@ -903,6 +899,18 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
   align-items: center;
 }
 
+.header-navigation > ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.header-navigation li {
+  list-style-type: none;
+}
+
 .header-navigation-item {
   position: relative;
 }
@@ -910,17 +918,24 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
 .header-navigation-sub-menu {
   position: absolute;
   display: none;
-  z-index: 0;
-  top: 0;
+  z-index: 200;
+  bottom: -8px;
   left: 0;
-  padding-top: 44px;
-}
-
-.header-navigation-sub-menu-content {
   background-color: #FCFCFC;
   padding: 8px 0;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  transform: translateY(100%);
+}
+
+.header-navigation-sub-menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -8px;
+  height: 8px;
+  left: 0;
+  right: 0;
 }
 
 .header-navigation-sub-menu-item {
@@ -961,16 +976,45 @@ input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(
   display: block;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
 .header-right .header-navigation-item {
   margin-left: 16px;
 }
 
+.header-right-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right-menu li {
+  list-style-type: none;
+}
+
 .header-navigation-item .popup {
   position: absolute;
+  z-index: 200;
   display: none;
   right: 0;
-  top: 0;
-  padding-top: 40px;
+  bottom: -8px;
+  transform: translateY(100%);
+}
+
+.header-navigation-item .popup::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 8px;
 }
 
 .header-navigation-item.active .popup, .header-navigation-item:hover .popup, .popup:hover {
