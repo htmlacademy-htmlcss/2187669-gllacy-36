@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font: normal 18px Inter;
+  font: normal 18px Inter, sans-serif;
   line-height: 24px;
   color: #2D3440;
   display: grid;
@@ -62,58 +62,74 @@ body {
   display: flex;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .text-header-1 {
-  font: 900 36px Inter;
+  font: 900 36px Inter, sans-serif;
   line-height: 46px;
+  margin: 0;
 }
 
 .text-header-2 {
-  font: 900 32px Inter;
+  font: 900 32px Inter, sans-serif;
   line-height: 46px;
+  margin: 0;
 }
 
 .text-header-3 {
-  font: 700 24px Inter;
+  font: 700 24px Inter, sans-serif;
   line-height: 30px;
+  margin: 0;
 }
 
 .text-header-4 {
-  font: 700 20px Inter;
+  font: 700 20px Inter, sans-serif;
   line-height: 24px;
+  margin: 0;
 }
 
 .text-header-5 {
-  font: 700 20px Inter;
+  font: 700 20px Inter, sans-serif;
   line-height: 28px;
+  margin: 0;
 }
 
 .text-header-6 {
-  font: 700 18px Inter;
+  font: 700 18px Inter, sans-serif;
   line-height: 22px;
+  margin: 0;
 }
 
 .text-paragraph-1 {
-  font: 400 18px Inter;
+  font: 400 18px Inter, sans-serif;
   line-height: 24px;
 }
 
 .text-paragraph-2 {
-  font: 400 16px Inter;
+  font: 400 16px Inter, sans-serif;
   line-height: 22px;
 }
 
 .text-paragraph-3 {
-  font: 400 16px Inter;
+  font: 400 16px Inter, sans-serif;
   line-height: 20px;
 }
 
 .text-caption-1 {
-  font: 400 14px Inter;
+  font: 400 14px Inter, sans-serif;
   line-height: 20px;
 }
 
 .text-caption-2 {
-  font: 400 12px Inter;
+  font: 400 12px Inter, sans-serif;
   line-height: 16px;
 }
 
@@ -167,7 +183,7 @@ body {
   position: relative;
   z-index: 1;
   display: inline-flex;
-  font: 700 16px Inter;
+  font: 700 16px Inter, sans-serif;
   line-height: 20px;
   text-decoration: none;
   color: #2D3440;
@@ -229,7 +245,7 @@ body {
   position: relative;
   z-index: 1;
   display: inline-flex;
-  font: 700 16px Inter;
+  font: 700 16px Inter, sans-serif;
   line-height: 20px;
   text-decoration: none;
   color: #FCFCFC;
@@ -319,6 +335,7 @@ body {
   padding: 14px 16px;
   border: 1px solid #B9B9B9;
   outline: none;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 20px;
   border-radius: 4px;
@@ -373,6 +390,9 @@ textarea.input {
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .select.icon-right .icon {
@@ -501,9 +521,7 @@ textarea.input {
   cursor: pointer;
 }
 
-.radio .radio-button {
-  display: none;
-}
+.radio .radio-button {}
 
 .radio-field {
   position: relative;
@@ -536,11 +554,11 @@ textarea.input {
   margin-left: 8px;
 }
 
-.radio:hover .radio-button:not(:disabled) + .radio-field {
+.radio-button:focus:not(:disabled) + .radio-field, .radio:hover .radio-button:not(:disabled) + .radio-field {
   border-color: #FCFCFC;
 }
 
-.radio:hover .radio-button:not(:disabled) + .radio-field::before {
+.radio-button:focus:not(:disabled) + .radio-field::before, .radio:hover .radio-button:not(:disabled) + .radio-field::before {
   background-color: #FCFCFC;
 }
 
@@ -555,10 +573,6 @@ textarea.input {
   font-size: 14px;
   line-height: 20px;
   cursor: pointer;
-}
-
-.checkbox input[type="checkbox"] {
-  display: none;
 }
 
 .checkbox-field {
@@ -592,11 +606,11 @@ input:disabled + .checkbox-field {
   margin-left: 8px;
 }
 
-.checkbox:hover input:not(:disabled) + .checkbox-field {
+input:focus:not(:disabled) + .checkbox-field, .checkbox:hover input:not(:disabled) + .checkbox-field {
   color: #FCFCFC;
 }
 
-.checkbox:hover input:not(:disabled) + .checkbox-field::before {
+input:focus:not(:disabled) + .checkbox-field::before, .checkbox:hover input:not(:disabled) + .checkbox-field::before {
   color: #FCFCFC;
 }
 
@@ -680,6 +694,10 @@ input:disabled + .checkbox-field {
  */
 
 .popup {
+
+}
+
+.popup-content {
   padding: 48px;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -711,6 +729,7 @@ input:disabled + .checkbox-field {
 
 .modal-cancel {
   position: absolute;
+  z-index: 100;
   top: 32px;
   right: 32px;
   display: flex;
@@ -721,6 +740,7 @@ input:disabled + .checkbox-field {
   padding: 0;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 /**
@@ -728,6 +748,8 @@ input:disabled + .checkbox-field {
  */
 
 .header-button {
+  position: relative;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
@@ -736,6 +758,7 @@ input:disabled + .checkbox-field {
   color: #2D3440;
   text-decoration: none;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .header-button:hover {
@@ -786,18 +809,21 @@ input:disabled + .checkbox-field {
 }
 
 .header-user-button {
+  position: relative;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 16px;
+  padding: 4px 16px;
   border-radius: 30px;
-  border: 0;
+  border: 2px solid transparent;
   background-color: rgb(252, 252, 252, 0.3);
   color: #2D3440;
   text-decoration: none;
   font-size: 14px;
   line-height: 20px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .header-user-button:hover {
@@ -837,6 +863,10 @@ input:disabled + .checkbox-field {
 
 .header-user-button.icon-left .icon {
   margin-right: 6px;
+}
+
+.header-user-button:focus ~ .popup {
+  display: block;
 }
 
 .header {
@@ -880,8 +910,13 @@ input:disabled + .checkbox-field {
 .header-navigation-sub-menu {
   position: absolute;
   display: none;
-  top: 44px;
+  z-index: 0;
+  top: 0;
   left: 0;
+  padding-top: 44px;
+}
+
+.header-navigation-sub-menu-content {
   background-color: #FCFCFC;
   padding: 8px 0;
   border-radius: 8px;
@@ -922,7 +957,7 @@ input:disabled + .checkbox-field {
   margin: 4px 16px;
 }
 
-.header-navigation-item.active .header-navigation-sub-menu, .header-navigation-item:hover .header-navigation-sub-menu {
+.header-navigation-item.active .header-navigation-sub-menu, .header-navigation-item:hover .header-navigation-sub-menu, .header-navigation-sub-menu:hover {
   display: block;
 }
 
@@ -934,10 +969,11 @@ input:disabled + .checkbox-field {
   position: absolute;
   display: none;
   right: 0;
-  top: 40px;
+  top: 0;
+  padding-top: 40px;
 }
 
-.header-navigation-item.active .popup, .header-navigation-item:hover .popup {
+.header-navigation-item.active .popup, .header-navigation-item:hover .popup, .popup:hover {
   display: block;
 }
 
@@ -958,7 +994,7 @@ input:disabled + .checkbox-field {
   margin-top: 32px;
 }
 
-.header-navigation-item-log-in-popup-form .input + .input {
+.header-navigation-item-log-in-popup-form .input ~ .input {
   margin-top: 16px;
 }
 
@@ -1035,11 +1071,14 @@ input:disabled + .checkbox-field {
 }
 
 .phone {
+  position: relative;
+  z-index: 200;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   text-decoration: none;
   color: #2D3440;
+  white-space: nowrap;
 }
 
 .hero {
@@ -1209,10 +1248,24 @@ input:disabled + .checkbox-field {
 }
 
 .breadcrumbs > * + * {
-  margin-left: 8px;
+  margin-left: 28px;
+}
+
+.breadcrumbs > * + *::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  margin-top: -6px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.35355 3.14645C3.15829 2.95118 2.84171 2.95118 2.64645 3.14645C2.45118 3.34171 2.45118 3.65829 2.64645 3.85355L4.79289 6L2.64645 8.14645C2.45118 8.34171 2.45118 8.65829 2.64645 8.85355C2.84171 9.04882 3.15829 9.04882 3.35355 8.85355L5.85355 6.35355C6.04882 6.15829 6.04882 5.84171 5.85355 5.64645L3.35355 3.14645ZM6.85352 3.14645C6.65826 2.95118 6.34168 2.95118 6.14642 3.14645C5.95115 3.34171 5.95115 3.65829 6.14642 3.85355L8.29286 6L6.14642 8.14645C5.95115 8.34171 5.95115 8.65829 6.14642 8.85355C6.34168 9.04882 6.65826 9.04882 6.85352 8.85355L9.35352 6.35355C9.54878 6.15829 9.54878 5.84171 9.35352 5.64645L6.85352 3.14645Z" fill="currentColor"/></svg>');
+  background-size: contain;
+  pointer-events: none;
 }
 
 .breadcrumbs-item {
+  position: relative;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
@@ -1220,7 +1273,7 @@ input:disabled + .checkbox-field {
   color: #2D3440;
 }
 
-.breadcrumbs-item:hover, .breadcrumbs-item.active {
+.breadcrumbs-item:hover, .breadcrumbs-item:last-child {
   text-decoration: underline;
 }
 
@@ -1265,6 +1318,12 @@ input:disabled + .checkbox-field {
   padding: 0 40px 24px 40px;
   border-radius: 8px;
   background-color: #FCFCFC;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-photo {
